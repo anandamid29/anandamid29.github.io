@@ -1,13 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Svatopluk Šebek | Limitovaná edice 10/10</title>
+    <title>NFT kolekce: Šťastný ať je celý vesmír</title>
     <style>
         body {margin:0;background:#000;color:#fff;font-family:Arial;text-align:center;padding:20px;}
-        h1 {font-size:3.5em;margin:40px 0 20px;}
+        h1 {font-size:3.5em;margin:40px 0 20px;letter-spacing:2px;}
         p.intro {font-size:1.4em;margin-bottom:50px;}
         .grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px;padding:20px;max-width:1600px;margin:auto;}
         .card {background:#111;padding:25px;border-radius:20px;box-shadow:0 0 30px rgba(0,255,0,0.3);transition:transform 0.3s;}
@@ -16,14 +15,15 @@
         h2 {margin:20px 0 10px;font-size:1.8em;}
         .info {font-size:1.1em;margin:15px 0;}
         a {color:#0f0;font-size:1.4em;text-decoration:none;margin-top:15px;display:block;font-weight:bold;}
+        a:hover {text-shadow:0 0 10px #0f0;}
         footer {margin:80px 0 40px;font-size:0.9em;opacity:0.8;}
     </style>
 </head>
 <body>
-    <h1>Svatopluk Šebek</h1>
+    <h1>NFT kolekce: Šťastný ať je celý vesmír</h1>
     <p class="intro">Limitovaná edice – 10 ks/ks digitálních tisků<br>
     Každý kus vlastnoručně signovaný a očíslovaný<br>
-    Připraveno k mintu na OpenSea</p>
+    Připraveno k mintu na OpenSea • Ethereum blockchain</p>
 
     <div class="grid"></div>
 
@@ -38,16 +38,22 @@
 
         const grid = document.querySelector('.grid');
         images.forEach((img, i) => {
-            const num = i + 1;
-            let popis = (num <= 14) ? "(dvě díla vedle sebe)" : "(samostatné dílo)";
+            const photoNum = i + 1;
+            let cisla;
+            if (photoNum <= 14) {
+                const prvni = (photoNum - 1) * 2 + 1;
+                cisla = `${prvni},${prvni + 1}/29`;
+            } else {
+                cisla = "29/29";
+            }
 
             const card = document.createElement('div');
             card.className = 'card';
             card.innerHTML = `
-                <img src="${img}" alt="Dílo #${num}/10">
-                <h2>#${num}/10 ${popis}</h2>
+                <img src="${img}" alt="Dílo ${cisla}">
+                <h2>${cisla}</h2>
                 <div class="info">Limitovaná edice 10 ks/ks • Vlastnoručně signováno a očíslováno</div>
-                <a href="https://opensea.io/assets/ethereum/TVOJE_KONTRAKT_ADRESA/${num}" target="_blank">
+                <a href="https://opensea.io/assets/ethereum/TVOJE_KONTRAKT_ADRESA/${photoNum}" target="_blank">
                     Zobrazit / Koupit na OpenSea →
                 </a>
             `;
@@ -55,7 +61,8 @@
         });
     </script>
 </body>
-</html>      
+</html>
+ 
 
   
        
