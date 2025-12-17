@@ -1,12 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Limitovaná edice 10/10 | Digitální tisky</title>
+    <title>Svatopluk Šebek | Limitovaná edice 10/10</title>
     <style>
-        body {margin:0;background:#000;color:#fff;font-family:'Arial',sans-serif;text-align:center;padding:20px;}
-        h1 {font-size:3.5em;margin:40px 0 20px;letter-spacing:2px;}
+        body {margin:0;background:#000;color:#fff;font-family:Arial;text-align:center;padding:20px;}
+        h1 {font-size:3.5em;margin:40px 0 20px;}
         p.intro {font-size:1.4em;margin-bottom:50px;}
         .grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px;padding:20px;max-width:1600px;margin:auto;}
         .card {background:#111;padding:25px;border-radius:20px;box-shadow:0 0 30px rgba(0,255,0,0.3);transition:transform 0.3s;}
@@ -15,50 +16,37 @@
         h2 {margin:20px 0 10px;font-size:1.8em;}
         .info {font-size:1.1em;margin:15px 0;}
         a {color:#0f0;font-size:1.4em;text-decoration:none;margin-top:15px;display:block;font-weight:bold;}
-        a:hover {text-shadow:0 0 10px #0f0;}
         footer {margin:80px 0 40px;font-size:0.9em;opacity:0.8;}
     </style>
 </head>
 <body>
-    <h1>Limitovaná edice – 10 ks/ks</h1>
-    <p class="intro">Každý kus je digitálně signovaný a očíslovaný<br>Vyvintováno na OpenSea • Ethereum blockchain</p>
+    <h1>Svatopluk Šebek</h1>
+    <p class="intro">Limitovaná edice – 10 ks/ks digitálních tisků<br>
+    Každý kus vlastnoručně signovaný a očíslovaný<br>
+    Připraveno k mintu na OpenSea</p>
 
-    <div class="grid">
-        <!-- Automaticky se vloží všech 15 obrázků -->
-    </div>
+    <div class="grid"></div>
 
-    <footer>© 2025 Tvoje jméno – všechna práva vyhrazena</footer>
+    <footer>© 2025 Svatopluk Šebek – všechna práva vyhrazena</footer>
 
     <script>
-        // Sem napiš přesná jména svých 15 souborů (v pořadí, v jakém chceš, aby se zobrazovaly)
-        // Příklad: "obrazek1.jpg", "dilo2.png", "dvojice3.jpg" atd.
         const images = [
-            "obrazek1.jpg",  // ← změň na skutečné jméno prvního souboru
-            "obrazek2.jpg",
-            "obrazek3.jpg",
-            "obrazek4.jpg",
-            "obrazek5.jpg",
-            "obrazek6.jpg",
-            "obrazek7.jpg",
-            "obrazek8.jpg",
-            "obrazek9.jpg",
-            "obrazek10.jpg",
-            "obrazek11.jpg",
-            "obrazek12.jpg",
-            "obrazek13.jpg",
-            "obrazek14.jpg",
-            "obrazek15.jpg"
+            "image-1.jpg.png","image-2.jpg.png","image-3.jpg.png","image-4.jpg.png","image-5.jpg.png",
+            "image-6.jpg.png","image-7.jpg.png","image-8.jpg.png","image-9.jpg.png","image-10.jpg.png",
+            "image-11.jpg.png","image-12.jpg.png","image-13.jpg.png","image-14.jpg.png","image-15.jpg.png"
         ];
 
         const grid = document.querySelector('.grid');
         images.forEach((img, i) => {
             const num = i + 1;
+            let popis = (num <= 14) ? "(dvě díla vedle sebe)" : "(samostatné dílo)";
+
             const card = document.createElement('div');
             card.className = 'card';
             card.innerHTML = `
                 <img src="${img}" alt="Dílo #${num}/10">
-                <h2>#${num}/10</h2>
-                <div class="info">Limitovaná edice • Digitálně signováno • Očíslováno</div>
+                <h2>#${num}/10 ${popis}</h2>
+                <div class="info">Limitovaná edice 10 ks/ks • Vlastnoručně signováno a očíslováno</div>
                 <a href="https://opensea.io/assets/ethereum/TVOJE_KONTRAKT_ADRESA/${num}" target="_blank">
                     Zobrazit / Koupit na OpenSea →
                 </a>
@@ -67,4 +55,7 @@
         });
     </script>
 </body>
-</html>
+</html>      
+
+  
+       
