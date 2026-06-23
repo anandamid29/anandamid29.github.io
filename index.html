@@ -32,11 +32,19 @@
             text-align: center;
             margin-bottom: 32px;
         }
+        .profile-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--border);
+            margin-bottom: 16px;
+        }
         h1 {
             font-size: 1.8rem;
             font-weight: 700;
             letter-spacing: -0.02em;
-            margin: 0 0 8px 0;
+            margin: 0 0 4px 0;
         }
         .subtitle {
             color: var(--text-muted);
@@ -49,7 +57,7 @@
             color: #d4d4d8;
             font-size: 0.95rem;
             line-height: 1.6;
-            margin-bottom: 40px;
+            margin-bottom: 32px;
             text-align: left;
             background-color: var(--surface);
             padding: 24px;
@@ -73,6 +81,7 @@
             display: flex;
             flex-direction: column;
             gap: 12px;
+            margin-bottom: 32px;
         }
         .card-link {
             background-color: var(--surface);
@@ -96,6 +105,23 @@
             color: var(--text-muted);
             font-size: 1.1rem;
         }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            border-top: 1px solid var(--border);
+            padding-top: 24px;
+        }
+        .social-btn {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.15s;
+        }
+        .social-btn:hover {
+            color: var(--text);
+        }
     </style>
 </head>
 <body>
@@ -103,6 +129,8 @@
     <div class="container">
         
         <div class="header-section">
+            <!-- TVÁ PROFILOVÁ FOTKA -->
+            <img src="profil.jpg" alt="Svatopluk Šebek" class="profile-img">
             <h1>Šťastný ať je celý vesmír</h1>
             <p class="subtitle">Autorská kolekce</p>
         </div>
@@ -117,7 +145,7 @@
             </ul>
         </div>
 
-        <!-- TŘI PŘESNÉ ODKAZY -->
+        <!-- HLAVNÍ PRODEJNÍ ODKAZY -->
         <div class="links-group">
             <a href="./tisky/" class="card-link">
                 Kolekce fyzických tisků <span>→</span>
@@ -130,6 +158,12 @@
             <a href="https://run.app" target="_blank" class="card-link">
                 Autorské kartičky (150 Kč) <span>→</span>
             </a>
+        </div>
+
+        <!-- ODKAZY NA SOCIÁLNÍ SÍTĚ -->
+        <div class="social-links">
+            <a href="https://x.com" target="_blank" class="social-btn">X (Twitter)</a>
+            <a href="https://facebook.com" target="_blank" class="social-btn">Facebook</a>
         </div>
 
     </div>
