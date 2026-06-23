@@ -1,142 +1,91 @@
-<!DOCTYPE html>
+html<!DOCTYPE html>
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anandamid 29 | Limitovaná hybridní umělecká kolekce</title>
+    <title>Šťastný ať je celý vesmír</title>
     <style>
+        :root {
+            --bg: #0b0b0f;
+            --surface: #16161f;
+            --text: #f4f4f6;
+            --text-muted: #8e8e9f;
+            --accent: #ffffff;
+        }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            background-color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
         .container {
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 480px;
+            width: 100%;
             padding: 40px 20px;
-        }
-        header {
             text-align: center;
-            margin-bottom: 60px;
         }
-        header h1 {
-            font-size: 2.5em;
-            letter-spacing: -1px;
-            margin-bottom: 10px;
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 8px;
         }
-        header p {
-            font-size: 1.2em;
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto;
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 48px;
         }
-        .section-box {
-            background: #fafafa;
-            border: 1px solid #eaeaea;
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 40px;
+        .links-group {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
         }
-        .section-box h2 {
-            margin-top: 0;
-            font-size: 1.8em;
-        }
-        .badge {
-            display: inline-block;
-            background: #e0e0e0;
-            color: #333;
-            padding: 4px 10px;
-            font-size: 0.85em;
-            font-weight: bold;
-            border-radius: 4px;
-            margin-bottom: 15px;
-        }
-        ul {
-            padding-left: 20px;
-            margin-bottom: 25px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        .btn {
-            display: inline-block;
-            background: #111;
-            color: #fff;
+        .card-link {
+            background-color: var(--surface);
+            color: var(--text);
             text-decoration: none;
-            padding: 14px 28px;
-            font-weight: bold;
-            border-radius: 6px;
-            transition: background 0.2s;
-            text-align: center;
+            padding: 20px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.2s, background-color 0.2s;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .btn:hover {
-            background: #333;
+        .card-link:hover {
+            background-color: #1e1e2b;
+            transform: translateY(-2px);
         }
-        .btn-secondary {
-            background: transparent;
-            color: #111;
-            border: 2px solid #111;
-        }
-        .btn-secondary:hover {
-            background: #111;
-            color: #fff;
-        }
-        .warning-text {
-            font-size: 0.9em;
-            color: #666;
-            border-left: 3px solid #ccc;
-            padding-left: 15px;
-            margin-top: 20px;
-            font-style: italic;
+        .card-link span {
+            color: var(--text-muted);
+            font-size: 1.2rem;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        
-        <!-- HLAVNÍ HLAVIČKA WEBU -->
-        <header>
-            <h1>Anandamid 29</h1>
-            <p>Limitovaná hybridní umělecká kolekce. Pouze 10 fyzických kusů na celém světě. Žádné další tisky nikdy nevzniknou.</p>
-        </header>
+        <h1>Šťastný ať je celý vesmír</h1>
+        <p class="subtitle">Autorská kolekce</p>
 
-        <main>
-            
-            <!-- SEKCE 1: SBĚRATELSKÉ TISKY (ODKAZ NA /TISKY/) -->
-            <div class="section-box">
-                <span class="badge">HLAVNÍ KOLEKCE</span>
-                <h2>Limitované tisky & Plátna</h2>
-                <p>Prohlédněte si aktuálně odemčená díla z kolekce 29 motivů. Každý motiv existuje striktně v počtu 9 kusů sběratelských tisků A3 (profesionální 12barevný tisk) a 1 kusu muzejního plátna Hahnemühle A0+.</p>
-                <ul>
-                    <li><strong>9× Sběratelský tisk A3</strong> – Špičková ostrost pro moderní interiéry (3 000 Kč).</li>
-                    <li><strong>1× Muzejní plátno A0+</strong> – Monumentální formát s digitálním NFT certifikátem pravosti (20 000 Kč).</li>
-                </ul>
-                <a href="./tisky/" class="btn">Vstoupit do galerie děl →</a>
-            </div>
+        <div class="links-group">
+            <!-- ODKAZ NA TISKY -->
+            <a href="./tisky/" class="card-link">
+                Prohlédnout kolekci tisků <span>→</span>
+            </a>
 
-            <!-- SEKCE 2: PODPORA TVORBY (ODKAZ NA GOOGLE CLOUD APP) -->
-            <div class="section-box" style="border-color: #ddd;">
-                <span class="badge" style="background: #111; color: #fff;">PODPORA AUTORA</span>
-                <h2>Autorské kartičky za 150 Kč</h2>
-                <p>Chcete mě podpořit v další tvorbě a mít doma kousek mého světa za symbolickou cenu? Nemusíte hned kupovat velký formát. Přes moji aplikaci si můžete objednat podepsanou pohlednici.</p>
-                
-                <p><strong>Co získáte:</strong> Fyzickou pohlednici (10×15 cm) s vybraným motivem. Tyto kartičky si tisknu sám ve svém ateliéru na 3barevné tiskárně. Každý kus osobně zkontroluji, podepíšu a ručně očísluji.</p>
-                
-                <div class="warning-text">
-                    <strong>Upozornění:</strong> Nejedná se o dokonalý průmyslový tisk z profi laboratoře (ten najdete u velkých A3 tisků). Moje domácí tiskárna má jen 3 barvy. Některé motivy jsou perfektní, jiné mají surovou, jedinečnou texturu. Je to autentický autorský originál.
-                </div>
-                
-                <div style="margin-top: 25px;">
-                    <a href="https://run.app" target="_blank" class="btn btn-secondary">Objednat kartičku přes aplikaci →</a>
-                </div>
-            </div>
-
-        </main>
-
+            <!-- ODKAZ NA KARTIČKY (GOOGLE RUN APP) -->
+            <a href="https://run.app" target="_blank" class="card-link">
+                Podpořit tvorbu & kartičky (150 Kč) <span>→</span>
+            </a>
+        </div>
     </div>
 
 </body>
