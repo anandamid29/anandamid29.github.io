@@ -24,23 +24,43 @@
             min-height: 100vh;
         }
         .container {
-            max-width: 440px;
+            max-width: 480px;
             width: 100%;
             padding: 40px 20px;
+        }
+        .header-section {
             text-align: center;
+            margin-bottom: 32px;
         }
         h1 {
             font-size: 1.8rem;
             font-weight: 700;
             letter-spacing: -0.02em;
-            margin-bottom: 8px;
+            margin: 0 0 8px 0;
         }
         .subtitle {
             color: var(--text-muted);
             font-size: 0.95rem;
-            margin-bottom: 40px;
             text-transform: uppercase;
             letter-spacing: 0.05em;
+            margin: 0;
+        }
+        .project-desc {
+            color: #d4d4d8;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            text-align: left;
+            background-color: var(--surface);
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+        .project-desc p {
+            margin: 0 0 12px 0;
+        }
+        .project-desc p:last-child {
+            margin-bottom: 0;
         }
         .links-group {
             display: flex;
@@ -74,9 +94,19 @@
 <body>
 
     <div class="container">
-        <h1>Šťastný ať je celý vesmír</h1>
-        <p class="subtitle">Autorská kolekce</p>
+        
+        <div class="header-section">
+            <h1>Šťastný ať je celý vesmír</h1>
+            <p class="subtitle">Autorská kolekce</p>
+        </div>
 
+        <!-- STRUČNÉ VYSVĚTLENÍ PROJEKTU -->
+        <div class="project-desc">
+            <p>Vítejte v mém kreativním prostoru. Představuji vám ucelenou autorskou kolekci děl, která propojuje fyzickou tvorbu s digitálním světem.</p>
+            <p>Projekt je rozdělen do tří rovin – od limitovaných velkoformátových tisků pro vaše interiéry, přes digitální certifikáty na blockchainu, až po drobné autorské pohlednice tištěné přímo u mě v ateliéru.</p>
+        </div>
+
+        <!-- TŘI PŘESNÉ ODKAZY -->
         <div class="links-group">
             <!-- ODKAZ NA TISKY -->
             <a href="./tisky/" class="card-link">
@@ -84,15 +114,16 @@
             </a>
 
             <!-- ODKAZ NA NFT (OPENSEA) -->
-            <a href="https://opensea.io/collection/happy-may-the-whole-universe-be" target="_blank" class="card-link">
+            <a href="https://opensea.io" target="_blank" class="card-link">
                 Digitální NFT certifikáty (OpenSea) <span>→</span>
             </a>
             
             <!-- ODKAZ NA KARTIČKY -->
-            <a href="https://ais-pre-zj44xy7khihjppg45bpwli-267011724047.europe-west3.run.app/" target="_blank" class="card-link">
+            <a href="https://run.app" target="_blank" class="card-link">
                 Autorské kartičky (150 Kč) <span>→</span>
             </a>
         </div>
+
     </div>
 
 </body>
