@@ -47,7 +47,7 @@
         }
         .project-desc {
             color: #d4d4d8;
-            font-size: 1rem;
+            font-size: 0.95rem;
             line-height: 1.6;
             margin-bottom: 40px;
             text-align: left;
@@ -57,9 +57,16 @@
             border: 1px solid var(--border);
         }
         .project-desc p {
-            margin: 0 0 12px 0;
+            margin: 0 0 16px 0;
         }
-        .project-desc p:last-child {
+        .project-desc ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .project-desc li {
+            margin-bottom: 12px;
+        }
+        .project-desc li:last-child {
             margin-bottom: 0;
         }
         .links-group {
@@ -100,25 +107,26 @@
             <p class="subtitle">Autorská kolekce</p>
         </div>
 
-        <!-- STRUČNÉ VYSVĚTLENÍ PROJEKTU -->
+        <!-- PŘEDSTAVENÍ PROJEKTU -->
         <div class="project-desc">
-            <p>Vítejte v mém kreativním prostoru. Představuji vám ucelenou autorskou kolekci děl, která propojuje fyzickou tvorbu s digitálním světem.</p>
-            <p>Projekt je rozdělen do tří rovin – od limitovaných velkoformátových tisků pro vaše interiéry, přes digitální certifikáty na blockchainu, až po drobné autorské pohlednice tištěné přímo u mě v ateliéru.</p>
+            <p>Tato autorská kolekce představuje hybridní umělecký projekt, kde se fyzické řemeslo potkává s digitální érou. Celý koncept stojí na třech propojených rovinách:</p>
+            <ul>
+                <li><strong>Limitované fyzické tisky:</strong> Kolekce 29 motivů, které si můžete prohlédnout v prodejní galerii a pořídit na svou zeď ve formátu A3 nebo A0+.</li>
+                <li><strong>Digitální NFT certifikáty:</strong> Pro každý motiv existuje pouze 1 unikátní NFT na platformě OpenSea. Slouží jako nezfalšovatelný digitální certifikát pravosti a získá ho ten majitel, který si jako první zakoupí fyzický tisk (A3 nebo A0+) a zažádá o něj.</li>
+                <li><strong>Autorské kartičky (150 Kč):</strong> Nízkoprahová cesta, jak projekt podpořit. Vlastnoručně vytištěné pohlednice přímo z mého ateliéru, které osobně podepisuji a čísluji. Každý motiv je vydán v přísně limitované edici pouhých 100 kusů. Každá kartička je díky domácímu tisku neopakovatelný originál s jedinečnou texturou.</li>
+            </ul>
         </div>
 
         <!-- TŘI PŘESNÉ ODKAZY -->
         <div class="links-group">
-            <!-- ODKAZ NA TISKY -->
             <a href="./tisky/" class="card-link">
                 Kolekce fyzických tisků <span>→</span>
             </a>
 
-            <!-- ODKAZ NA NFT (OPENSEA) -->
             <a href="https://opensea.io" target="_blank" class="card-link">
                 Digitální NFT certifikáty (OpenSea) <span>→</span>
             </a>
             
-            <!-- ODKAZ NA KARTIČKY -->
             <a href="https://run.app" target="_blank" class="card-link">
                 Autorské kartičky (150 Kč) <span>→</span>
             </a>
