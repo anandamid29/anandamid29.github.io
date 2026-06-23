@@ -24,13 +24,13 @@
             min-height: 100vh;
         }
         .container {
-            max-width: 460px;
+            max-width: 440px;
             width: 100%;
             padding: 40px 20px;
             text-align: center;
         }
         h1 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 700;
             letter-spacing: -0.02em;
             margin-bottom: 8px;
@@ -45,16 +45,16 @@
         .links-group {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 12px;
         }
         .card-link {
             background-color: var(--surface);
             color: var(--text);
             text-decoration: none;
-            padding: 20px 24px;
+            padding: 18px 24px;
             border-radius: 8px;
-            font-weight: 600;
-            font-size: 1.05rem;
+            font-weight: 500;
+            font-size: 1rem;
             transition: background-color 0.15s, border-color 0.15s;
             border: 1px solid var(--border);
             display: flex;
@@ -67,16 +67,7 @@
         }
         .card-link span {
             color: var(--text-muted);
-            font-size: 1.2rem;
-        }
-        .info-text {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-top: 30px;
-            line-height: 1.5;
-            border-top: 1px solid var(--border);
-            padding-top: 20px;
-            text-align: left;
+            font-size: 1.1rem;
         }
     </style>
 </head>
@@ -84,19 +75,23 @@
 
     <div class="container">
         <h1>Šťastný ať je celý vesmír</h1>
-        <p class="subtitle">Autorská kolekce děl</p>
+        <p class="subtitle">Autorská kolekce</p>
 
         <div class="links-group">
-            <!-- HLAVNÍ FUNKČNÍ ODKAZ NA TISKY -->
+            <!-- ODKAZ NA TISKY -->
             <a href="./tisky/" class="card-link">
-                Vstoupit do galerie tisků <span>→</span>
+                Kolekce fyzických tisků <span>→</span>
             </a>
-        </div>
 
-        <!-- ČISTÉ INFORMACE BEZ ROZBITÝCH ODKAZŮ -->
-        <div class="info-text">
-            <p><strong>Digitální NFT certifikáty:</strong> Kolekce je digitálně podepsána na platformě OpenSea. Odkazy na konkrétní NFT certifikáty najdete přímo u jednotlivých děl v galerii tisků.</p>
-            <p><strong>Autorské kartičky (150 Kč):</strong> Pokud chcete podpořit tvorbu a získat fyzickou podepsanou pohlednici, funkční objednávkový odkaz najdete připnutý na mém profilu na síti X.</p>
+            <!-- ODKAZ NA NFT (OPENSEA) -->
+            <a href="https://opensea.io/collection/happy-may-the-whole-universe-be" target="_blank" class="card-link">
+                Digitální NFT certifikáty (OpenSea) <span>→</span>
+            </a>
+            
+            <!-- ODKAZ NA KARTIČKY -->
+            <a href="https://ais-pre-zj44xy7khihjppg45bpwli-267011724047.europe-west3.run.app/" target="_blank" class="card-link">
+                Autorské kartičky (150 Kč) <span>→</span>
+            </a>
         </div>
     </div>
 
